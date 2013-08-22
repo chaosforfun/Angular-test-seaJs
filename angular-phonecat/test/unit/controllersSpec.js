@@ -12,7 +12,7 @@ describe('PhoneCat controllers', function() {
   });
 
 
-  beforeEach(module('phonecatServices'));
+  beforeEach(module('phonecat'));
 
 
   describe('PhoneListCtrl', function(){
@@ -29,7 +29,7 @@ describe('PhoneCat controllers', function() {
 
 
     it('should create "phones" model with 2 phones fetched from xhr', function() {
-      expect(scope.phones).toEqual([]);
+      expect(scope.phones).toEqualData([]);
       $httpBackend.flush();
 
       expect(scope.phones).toEqualData(
