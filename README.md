@@ -1,4 +1,4 @@
 Node-Angular
 ============
 
-personal lear repository
+personal learn repository
