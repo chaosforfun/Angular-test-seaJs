@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-function PhoneListCtrl($scope, Phone) {
+function PhoneListCtrl($scope, Phone, $http) {
   $scope.phones = Phone.query();
   $scope.orderProp = 'age';
 }
