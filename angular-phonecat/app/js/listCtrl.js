@@ -1,24 +1,11 @@
 'use strict';
 
 /* Controllers */
-
-function PhoneListCtrl($scope, Phone, $http) {
-  $scope.phones = Phone.query();
-  $scope.orderProp = 'age';
-}
-
-//PhoneListCtrl.$inject = ['$scope', 'Phone'];
-
-
-
-function PhoneDetailCtrl($scope, $routeParams, Phone) {
-  $scope.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
-    $scope.mainImageUrl = phone.images[0];
-  });
-
-  $scope.setImage = function(imageUrl) {
-    $scope.mainImageUrl = imageUrl;
-  }
-}
-
-//PhoneDetailCtrl.$inject = ['$scope', '$routeParams', 'Phone'];
+define(function(require, exports, module) {
+	angular.module('phonecat').controllerProvider.register("PhoneListCtrl", ["$scope", "Phone", "$http",
+			function($scope, Phone, $http) {
+				$scope.phones = Phone.query();
+				$scope.orderProp = 'age';
+			}
+		])
+})
