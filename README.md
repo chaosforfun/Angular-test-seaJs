@@ -1,4 +1,23 @@
-Node-Angular
+Angular-test-seaJs
 ============
 
-personal learn repository
+angular测试驱动开发实际案例+seaJs按路由加载文件
+
+## 测试
+
+先是为了学习angular提倡的测试驱动，试着把angular提供的Demo改为实际写法之后跑了遍测试。
+和预期一样，测试不通过。修改测试写法之后就OK了。
+
+## seaJs按需加载
+
+遇到了很多问题，虽然通过牛人提供的hack方法实现了目的但是
+
+### 个人感觉这么做意义不大
+
+- angular已经做了模块区分，seaJs的模块部分基本没用，而且增加了代码复杂度。
+- 用seaJs做的话文件目录结构变化后代码修改比较麻烦（文件依赖分散，得各处改），直接写script的话只需要在index里面改就可以了。
+- 用了seaJs通过chrome和firfox观察脚本文件也是全部加载的，而不是像想象中那样特定路由加载特定脚本
+
+到这里这个小demo就结束吧。
+说下用的版本
+angualrjs：1.2.0rc1；seaJS：2.1.1
