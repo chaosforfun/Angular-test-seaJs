@@ -11,7 +11,7 @@ define(function(require, exports, module) {
 			when('/phones', {
 				templateUrl: 'partials/phone-list.html',
 				controller: "PhoneListCtrl",
-				resolve: {deps: function ($q) {
+				resolve: {deps: function ($q, $rootScope) {
 					var deferred = $q.defer();
 					require('./listCtrl');
 					deferred.resolve();
@@ -24,4 +24,5 @@ define(function(require, exports, module) {
 		}
 	]);
 	angular.bootstrap(document, ["phonecat"])
+	console.log('bootstrap')
 })

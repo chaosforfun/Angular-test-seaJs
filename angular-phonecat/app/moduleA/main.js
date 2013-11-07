@@ -13,7 +13,7 @@ define(function(require, exports, module) {
 				resolve: {
 					deps: function($q) {
 						var deferred = $q.defer();
-						require("./controller/detailCtrl")
+						require("./controller/detailCtrl");
 						deferred.resolve();
 						return deferred.promise;
 					}
